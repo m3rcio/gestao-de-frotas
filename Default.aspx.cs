@@ -11,4 +11,13 @@ public partial class _Default : Page
     {
 
     }
+    protected void btnSearch_Click(object sender, EventArgs e)
+    {
+        string pickup = txtPickup.Text;
+        string dropoff = txtDropoff.Text;
+        string pickupDate = txtPickupDate.Text;
+        string dropoffDate = txtDropoffDate.Text;
+        string pickupTime = txtPickupTime.Text;
+        
+    }
 }
