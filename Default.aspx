@@ -13,23 +13,8 @@
             <div class="col-lg-6 col-md-6 ftco-animate d-flex align-items-end">
                 <div class="text">
                     <h1 class="mb-4">
-                        Now <span>It's easy for you</span>
-                        <span>rent a car</span>
-                    </h1>
-
-                    <p style="font-size:18px;">
-                        A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                    </p>
-
-                    <a href="https://vimeo.com/45830194"
-                       class="icon-wrap popup-vimeo d-flex align-items-center mt-4">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="ion-ios-play"></span>
-                        </div>
-                        <div class="heading-title ml-5">
-                            <span>Easy steps for renting a car</span>
-                        </div>
-                    </a>
+                        Gestão de Frotas
+                    </h1
                 </div>
             </div>
 
