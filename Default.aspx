@@ -37,20 +37,20 @@
             <div class="col-lg-4 col-md-6 mt-0 mt-md-5 d-flex">
                 <asp:Panel runat="server" CssClass="request-form ftco-animate">
 
-                    <h2>Make your trip</h2>
+                    <h2>Entrar</h2>
 
                     <div class="form-group">
-                        <label class="label">Pick-up location</label>
+                        <label class="label">Email</label>
                         <asp:TextBox ID="txtPickup" runat="server"
                             CssClass="form-control"
                             Placeholder="City, Airport, Station, etc" />
                     </div>
 
                     <div class="form-group">
-                        <label class="label">Drop-off location</label>
+                        <label class="label">Palavra-Passe</label>
                         <asp:TextBox ID="txtDropoff" runat="server"
                             CssClass="form-control"
-                            Placeholder="City, Airport, Station, etc" />
+                            Placeholder="City, Airport, Station, etc" Type="password"/>
                     </div>
 
 
