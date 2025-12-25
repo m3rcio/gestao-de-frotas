@@ -57,7 +57,7 @@
 
                     <div class="form-group">
                         <asp:Button ID="btnSearch" runat="server"
-                            Text="Search Vehicle"
+                            Text="Entrar"
                             CssClass="btn btn-primary py-3 px-4"
                             OnClick="btnSearch_Click" />
                     </div>
