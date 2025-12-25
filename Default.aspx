@@ -53,28 +53,7 @@
                             Placeholder="City, Airport, Station, etc" />
                     </div>
 
-                    <div class="d-flex">
-                        <div class="form-group mr-2">
-                            <label class="label">Pick-up date</label>
-                            <asp:TextBox ID="txtPickupDate" runat="server"
-                                CssClass="form-control"
-                                Placeholder="Date" />
-                        </div>
 
-                        <div class="form-group ml-2">
-                            <label class="label">Drop-off date</label>
-                            <asp:TextBox ID="txtDropoffDate" runat="server"
-                                CssClass="form-control"
-                                Placeholder="Date" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="label">Pick-up time</label>
-                        <asp:TextBox ID="txtPickupTime" runat="server"
-                            CssClass="form-control"
-                            Placeholder="Time" />
-                    </div>
 
                     <div class="form-group">
                         <asp:Button ID="btnSearch" runat="server"
