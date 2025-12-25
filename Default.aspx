@@ -14,7 +14,7 @@
                 <div class="text">
                     <h1 class="mb-4">
                         Gestão de Frotas
-                    </h1
+                    </h1>
                 </div>
             </div>
 
