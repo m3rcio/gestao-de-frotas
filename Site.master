@@ -25,6 +25,10 @@
     <link href="<%= ResolveUrl("~/Content/style.css") %>" rel="stylesheet" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <!----Dashboard styles---->
+    <link href="<%= ResolveUrl("~/assets/css/styles.min.css") %>" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png"
+      href="<%= ResolveUrl("~/assets/images/logos/favicon.png") %>" />
 </head>
 <body>
     <form runat="server">
