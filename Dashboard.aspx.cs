@@ -12,7 +12,7 @@ public partial class Dashboard : System.Web.UI.Page
     {
 
         if (Session["Logado"] == null)
-            Response.Redirect("Login.aspx");
+            Response.Redirect("Dasboard.aspx");
 
         if (!IsPostBack)
             CarregarTabela();
