@@ -10,5 +10,12 @@ public partial class Dashboard : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
+        if (Session["Logado"] == null)
+            Response.Redirect("Login.aspx");
+
+        if (!IsPostBack)
+            CarregarTabela();
     }
+
+
 }
