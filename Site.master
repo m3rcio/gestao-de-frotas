@@ -38,17 +38,6 @@
                 data-target="#ftco-nav">
                 <span class="oi oi-menu"></span> Menu
             </button>
-
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a runat="server" href="~/Default.aspx" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a runat="server" href="~/About.aspx" class="nav-link">About</a></li>
-                    <li class="nav-item"><a runat="server" href="~/Pricing.aspx" class="nav-link">Pricing</a></li>
-                    <li class="nav-item"><a runat="server" href="~/Cars.aspx" class="nav-link">Our Car</a></li>
-                    <li class="nav-item"><a runat="server" href="~/Blog.aspx" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a runat="server" href="~/Contact.aspx" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
         </div>
         teste
     </nav>
