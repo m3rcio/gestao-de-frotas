@@ -11,7 +11,7 @@ public partial class _Default : Page
     {
 
     }
-    protected void btnSearch_Click(object sender, EventArgs e)
+    protected void btnLogin_Click(object sender, EventArgs e)
     {
         string username = txtUsername.Text.Trim();
         string password = txtPassword.Text;

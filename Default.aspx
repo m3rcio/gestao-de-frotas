@@ -48,16 +48,6 @@
     CssClass="text-danger"
     Visible="false" />
 
-
-
-
-                    <div class="form-group">
-                        <asp:Button ID="btnSearch" runat="server"
-                            Text="Entrar"
-                            CssClass="btn btn-primary py-3 px-4"
-                            OnClick="btnSearch_Click" />
-                    </div>
-
                 </asp:Panel>
             </div>
 
