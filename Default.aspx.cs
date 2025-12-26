@@ -13,8 +13,26 @@ public partial class _Default : Page
     }
     protected void btnSearch_Click(object sender, EventArgs e)
     {
-        string pickup = txtPickup.Text;
-        string dropoff = txtDropoff.Text;
+        string username = txtUsername.Text.Trim();
+        string password = txtPassword.Text;
+
         
+        const string USER = "admin";
+        const string PASS = "1234";
+
+        if (username == USER && password == PASS)
+        {
+            
+            Session["Logado"] = true;
+            Session["Usuario"] = username;
+
+            Response.Redirect("Default.aspx");
+        }
+        else
+        {
+            lblErro.Text = "Usuário ou palavra-passe inválidos";
+            lblErro.Visible = true;
+        }
+
     }
 }
