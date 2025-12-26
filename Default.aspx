@@ -24,19 +24,30 @@
 
                     <h2>Entrar</h2>
 
-                    <div class="form-group">
-                        <label class="label">Email</label>
-                        <asp:TextBox ID="txtPickup" runat="server"
-                            CssClass="form-control"
-                            Placeholder="City, Airport, Station, etc" />
-                    </div>
+    <div class="form-group">
+    <label class="label">Nome de usuário</label>
+    <asp:TextBox ID="txtUsername" runat="server"
+        CssClass="form-control" />
+    </div>
 
-                    <div class="form-group">
-                        <label class="label">Palavra-Passe</label>
-                        <asp:TextBox ID="txtDropoff" runat="server"
-                            CssClass="form-control"
-                            Placeholder="City, Airport, Station, etc" Type="password"/>
-                    </div>
+    <div class="form-group">
+    <label class="label">Palavra-passe</label>
+    <asp:TextBox ID="txtPassword" runat="server"
+        CssClass="form-control"
+        TextMode="Password" />
+    </div>
+
+    <div class="form-group">
+    <asp:Button ID="btnLogin" runat="server"
+        Text="Entrar"
+        CssClass="btn btn-primary"
+        OnClick="btnLogin_Click" />
+    </div>
+
+    <asp:Label ID="lblErro" runat="server"
+    CssClass="text-danger"
+    Visible="false" />
+
 
 
 
