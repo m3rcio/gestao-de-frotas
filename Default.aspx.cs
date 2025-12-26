@@ -26,7 +26,7 @@ public partial class _Default : Page
             Session["Logado"] = true;
             Session["Usuario"] = username;
 
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Dashboard.aspx");
         }
         else
         {
