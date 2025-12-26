@@ -59,8 +59,8 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <h4 class="card-title">Products Performance</h4>
-                                <p class="card-subtitle">Ample Admin Vs Pixel Admin</p>
+                                <h4 class="card-title">Veículos</h4>
+                               
 
                                 <div class="table-responsive mt-4">
 
