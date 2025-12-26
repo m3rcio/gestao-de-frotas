@@ -76,5 +76,14 @@
 <script src="<%= ResolveUrl("~/Scripts/scrollax.min.js") %>"></script>
 <script src="<%= ResolveUrl("~/Scripts/google-map.js") %>"></script>
 <script src="<%= ResolveUrl("~/Scripts/main.js") %>"></script>
+<!--------- js da dashboard----->
+<script src="<%= ResolveUrl("~/assets/libs/jquery/dist/jquery.min.js") %>"></script>
+<script src="<%= ResolveUrl("~/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js") %>"></script>
+<script src="<%= ResolveUrl("~/assets/js/sidebarmenu.js") %>"></script>
+<script src="<%= ResolveUrl("~/assets/js/app.min.js") %>"></script>
+<script src="<%= ResolveUrl("~/assets/libs/apexcharts/dist/apexcharts.min.js") %>"></script>
+<script src="<%= ResolveUrl("~/assets/libs/simplebar/dist/simplebar.js") %>"></script>
+<script src="<%= ResolveUrl("~/assets/js/dashboard.js") %>"></script>
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </body>
 </html>
