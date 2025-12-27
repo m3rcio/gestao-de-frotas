@@ -77,11 +77,11 @@
                                         CssClass="form-control" />
                                 </div>
 
-                                <div class="mb-3">
+                               <!-- <div class="mb-3">
                                     <label class="form-label">Localização</label>
                                     <asp:TextBox ID="txtLocalizacao" runat="server"
                                         CssClass="form-control" />
-                                </div>
+                                </div> -->
 
                                 <div class="mb-3">
                                     <asp:Button ID="btnSalvar" runat="server"
