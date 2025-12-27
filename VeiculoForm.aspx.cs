@@ -34,7 +34,8 @@ public partial class VeiculoForm : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@Modelo", txtModelo.Text);
             cmd.Parameters.AddWithValue("@Ano", int.Parse(txtAno.Text));
             cmd.Parameters.AddWithValue("@Km", int.Parse(txtKm.Text));
-            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
+            cmd.Parameters.AddWithValue("@Estado", ddlEstado.SelectedValue);
+
 
             con.Open();
             cmd.ExecuteNonQuery();
