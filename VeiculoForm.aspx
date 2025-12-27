@@ -97,6 +97,16 @@
                                   TextMode="Number" />
                                 </div>
 
+                                <div class="mb-3">
+                                 <label class="form-label">Estado</label>
+                                    <asp:DropDownList ID="ddlEstado" runat="server"
+                                    CssClass="form-select">
+                                   <asp:ListItem Text="Selecione..." Value="" />
+                                   <asp:ListItem Text="Ativo" Value="Ativo" />
+                                  <asp:ListItem Text="Inativo" Value="Inativo" />
+                                  </asp:DropDownList>
+                                </div>
+
 
                                 <div class="mb-3">
                                     <asp:Button ID="btnSalvar" runat="server"
