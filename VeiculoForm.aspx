@@ -84,6 +84,14 @@
                                 </div> -->
 
                                 <div class="mb-3">
+                                 <label class="form-label">Quilometragem</label>
+                                <asp:TextBox ID="txtKm" runat="server"
+                                  CssClass="form-control"
+                                  TextMode="Number" />
+                                 </div>
+
+
+                                <div class="mb-3">
                                     <asp:Button ID="btnSalvar" runat="server"
                                         Text="Salvar Veículo"
                                         CssClass="btn btn-primary"
