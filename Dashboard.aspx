@@ -17,11 +17,11 @@
     <!-- SIDEBAR -->
     <aside class="left-sidebar">
         <div>
-            <div class="brand-logo d-flex align-items-center justify-content-between">
+            <!--<div class="brand-logo d-flex align-items-center justify-content-between">
                 <a runat="server" href="~/Dashboard.aspx" class="text-nowrap logo-img">
-                    <img src="<%= ResolveUrl("~/assets/images/logos/logo.svg") %>" />
+                <img src="<%= ResolveUrl("~/assets/images/logos/logo.svg") %>" />
                 </a>
-            </div>
+            </div>  -->
 
             <nav class="sidebar-nav scroll-sidebar">
                 <ul id="sidebarnav">
@@ -65,10 +65,12 @@
                                         AutoGenerateColumns="false">
 
                                         <Columns>
-                                            <asp:BoundField DataField="Nome" HeaderText="Name" />
-                                            <asp:BoundField DataField="Cargo" HeaderText="Role" />
-                                            <asp:BoundField DataField="Prioridade" HeaderText="Priority" />
-                                            <asp:BoundField DataField="Budget" HeaderText="Budget" />
+                                            <asp:BoundField DataField="Marca" HeaderText="Marca" />
+                                            <asp:BoundField DataField="Modelo" HeaderText="Modelo" />
+                                            <asp:BoundField DataField="Matricula" HeaderText="Matricula" />
+                                            <asp:BoundField DataField="Quilometragem" HeaderText="Quilometragem" />
+                                            <asp:BoundField DataField="Ano" HeaderText="Ano" />
+                                            <asp:BoundField DataField="Estado" HeaderText="Estado" />
                                         </Columns>
 
                                     </asp:GridView>
