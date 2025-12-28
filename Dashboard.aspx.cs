@@ -20,17 +20,16 @@ public partial class Dashboard : System.Web.UI.Page
 
     private void CarregarTabela()
     {
+        string sql = @"SELECT Id, Matricula, Marca, Modelo, Ano,
+                                  Quilometragem, Estado
+                           FROM Veiculos
+                           ORDER BY Id DESC";
+
+        SqlDataAdapter da = new SqlDataAdapter(sql, con);
         DataTable dt = new DataTable();
-        dt.Columns.Add("Marca");
-        dt.Columns.Add("Modelo");
-        dt.Columns.Add("Matricula");
-        dt.Columns.Add("Quilometragem");
-        dt.Columns.Add("Ano");
-        dt.Columns.Add("Estado");
+        da.Fill(dt);
 
-        dt.Rows.Add("Sunil Joshi", "Web Designer", "Low", "$3.9K");
-
-        gvPerformance.DataSource = dt;
-        gvPerformance.DataBind();
+        gvVeiculos.DataSource = dt;
+        gvVeiculos.DataBind();
     }
 }
