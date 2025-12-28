@@ -59,7 +59,7 @@
                                 <div class="table-responsive mt-4">
 
                                     <!-- TABELA EM ASP.NET -->
-                                    <asp:GridView ID="gvPerformance"
+                                    <asp:GridView ID="gvVeiculos"
                                         runat="server"
                                         CssClass="table mb-0 text-nowrap varient-table align-middle fs-3"
                                         AutoGenerateColumns="false">
