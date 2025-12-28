@@ -27,7 +27,7 @@ public partial class Dashboard : System.Web.UI.Page
 
         using (SqlConnection con = new SqlConnection(cs))
         {
-            string sql = @"SELECT Id, Matricula, Marca, Modelo, Ano,
+            string sql = @"SELECT veiculo_id, Matricula, Marca, Modelo, Ano,
                               Quilometragem, Estado
                        FROM Veiculos
                        ORDER BY Id DESC";
