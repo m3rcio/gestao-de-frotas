@@ -65,7 +65,7 @@
                                         AutoGenerateColumns="false">
 
                                         <Columns>
-                                            <asp:BoundField DataField="Id" HeaderText="Id" />
+                                            <asp:BoundField DataField="Id" HeaderText="ID" />
                                             <asp:BoundField DataField="Marca" HeaderText="Marca" />
                                             <asp:BoundField DataField="Modelo" HeaderText="Modelo" />
                                             <asp:BoundField DataField="Matricula" HeaderText="Matricula" />
