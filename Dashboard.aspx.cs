@@ -21,6 +21,8 @@ public partial class Dashboard : System.Web.UI.Page
     private void CarregarTabela()
     {
         DataTable dt = new DataTable();
+        dt.Columns.Add("Marca");
+        dt.Columns.Add("Modelo");
         dt.Columns.Add("Matricula");
         dt.Columns.Add("Quilometragem");
         dt.Columns.Add("Ano");
