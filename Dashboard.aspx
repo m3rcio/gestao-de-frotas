@@ -13,12 +13,6 @@
      data-sidebar-position="fixed"
      data-header-position="fixed">
 
-    <!-- TOP STRIP -->
-    <div class="app-topstrip bg-dark py-6 px-3 w-100 d-lg-flex align-items-center justify-content-between">
-        <a class="d-flex justify-content-center" runat="server" href="~/Dashboard.aspx">
-            <img src="<%= ResolveUrl("~/assets/images/logos/logo-wrappixel.svg") %>" width="150" />
-        </a>
-    </div>
 
     <!-- SIDEBAR -->
     <aside class="left-sidebar">
