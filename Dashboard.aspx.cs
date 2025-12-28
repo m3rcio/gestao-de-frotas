@@ -30,7 +30,7 @@ public partial class Dashboard : System.Web.UI.Page
             string sql = @"SELECT veiculo_id, Matricula, Marca, Modelo, Ano,
                               Quilometragem, Estado
                        FROM Veiculos
-                       ORDER BY Id DESC";
+                       ORDER BY veiculo_id DESC";
 
             SqlCommand cmd = new SqlCommand(sql, con);
 
