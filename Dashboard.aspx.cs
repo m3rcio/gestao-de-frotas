@@ -24,7 +24,7 @@ public partial class Dashboard : System.Web.UI.Page
         dt.Columns.Add("Nome");
         dt.Columns.Add("Cargo");
         dt.Columns.Add("Prioridade");
-        dt.Columns.Add("Budget");
+        dt.Columns.Add("Estado");
 
         dt.Rows.Add("Sunil Joshi", "Web Designer", "Low", "$3.9K");
 
