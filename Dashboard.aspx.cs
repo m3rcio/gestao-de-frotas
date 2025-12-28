@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,21 +17,30 @@ public partial class Dashboard : System.Web.UI.Page
             Response.Redirect("Default.aspx");
 
         if (!IsPostBack)
-            CarregarTabela();
+            CarregarVeiculos();
     }
 
-    private void CarregarTabela()
+    private void CarregarVeiculos()
     {
-        string sql = @"SELECT Id, Matricula, Marca, Modelo, Ano,
-                                  Quilometragem, Estado
-                           FROM Veiculos
-                           ORDER BY Id DESC";
+        string cs = ConfigurationManager
+                   .ConnectionStrings["DB"].ConnectionString;
 
-        SqlDataAdapter da = new SqlDataAdapter(sql, con);
-        DataTable dt = new DataTable();
-        da.Fill(dt);
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            string sql = @"SELECT Id, Matricula, Marca, Modelo, Ano,
+                              Quilometragem, Estado
+                       FROM Veiculos
+                       ORDER BY Id DESC";
 
-        gvVeiculos.DataSource = dt;
-        gvVeiculos.DataBind();
+            SqlCommand cmd = new SqlCommand(sql, con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            gvVeiculos.DataSource = dt;
+            gvVeiculos.DataBind();
+        }
     }
 }
