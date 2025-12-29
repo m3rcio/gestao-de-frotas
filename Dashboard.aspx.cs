@@ -36,6 +36,22 @@ public partial class Dashboard : System.Web.UI.Page
         }
     }
 
+    private void ApagarVeiculo(int id)
+    {
+        string cs = ConfigurationManager
+                        .ConnectionStrings["DB"].ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            string sql = "DELETE FROM Veiculos WHERE veiculo_id = @id";
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+        }
+    }
+
     protected void btnVeiculoForm_Click(object sender, EventArgs e)
     {
         Response.Redirect("VeiculoForm.aspx");
