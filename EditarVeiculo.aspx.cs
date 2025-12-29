@@ -23,6 +23,11 @@ public partial class EditarVeiculo : System.Web.UI.Page
         }
     }
 
+    protected void btnDashboard_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Dashboard.aspx");
+    }
+
     void CarregarVeiculo(int id)
     {
         string cs = @"SUA_CONNECTION_STRING";
