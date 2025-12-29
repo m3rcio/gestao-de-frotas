@@ -29,7 +29,7 @@ public partial class EditarVeiculo : System.Web.UI.Page
         Response.Redirect("Dashboard.aspx");
     }
 
-    void CarregarVeiculo(int id)
+    private void CarregarVeiculo(int id)
     {
         string cs = @"DefaultConnection";
 
