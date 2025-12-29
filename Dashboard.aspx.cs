@@ -57,6 +57,11 @@ public partial class Dashboard : System.Web.UI.Page
         Response.Redirect("VeiculoForm.aspx");
     }
 
+    protected void Editar_Command(object sender, CommandEventArgs e)
+    {
+        Response.Redirect("EditarVeiculo.aspx?id=" + e.CommandArgument);
+    }
+
     private void CarregarVeiculos()
     {
         string cs = ConfigurationManager
