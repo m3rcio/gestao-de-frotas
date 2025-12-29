@@ -29,15 +29,17 @@ public partial class EditarVeiculo : System.Web.UI.Page
         Response.Redirect("Dashboard.aspx");
     }
 
-    private void CarregarVeiculo(int id)
+    void CarregarVeiculo(int id)
     {
-        string cs = @"DefaultConnection";
+        string cs = ConfigurationManager
+                    .ConnectionStrings["DefaultConnection"]
+                    .ConnectionString;
 
         using (SqlConnection con = new SqlConnection(cs))
         {
-            string sql = @"SELECT matricula, marca, modelo, ano, quilometragem, estado
-                           FROM Veiculos
-                           WHERE veiculo_id = @id";
+            string sql = @"SELECT Matricula, Marca, Modelo, Ano, Quilometragem, Estado
+                       FROM Veiculos
+                       WHERE veiculo_id = @id";
 
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@id", id);
