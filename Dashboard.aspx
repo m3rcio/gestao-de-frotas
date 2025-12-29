@@ -57,7 +57,13 @@
                                
 
                                 <div class="table-responsive mt-4">
-
+                                     <asp:Button
+                        ID="btnDashboard"
+                         runat="server"
+                         Text="Ir para Dashboard"
+                         CssClass="btn btn-secondary mt-3"
+                         CausesValidation="false"
+                         OnClick="btnVeiculoForm_Click" />
                                     <!-- TABELA EM ASP.NET -->
                                     <asp:GridView ID="gvVeiculos"
                                         runat="server"
