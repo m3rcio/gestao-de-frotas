@@ -78,6 +78,33 @@
                                             <asp:BoundField DataField="Quilometragem" HeaderText="Quilometragem" />
                                             <asp:BoundField DataField="Ano" HeaderText="Ano" />
                                             <asp:BoundField DataField="Estado" HeaderText="Estado" />
+
+                                              <!-- AÇÕES -->
+        <asp:TemplateField HeaderText="Ações">
+            <ItemTemplate>
+
+                <!-- EDITAR -->
+                <asp:LinkButton
+                    runat="server"
+                    CssClass="btn btn-sm btn-warning me-1"
+                    CommandName="Editar"
+                    CommandArgument='<%# Eval("veiculo_id") %>'>
+                    <i class="bi bi-pencil-square"></i>
+                </asp:LinkButton>
+
+                <!-- APAGAR -->
+                <asp:LinkButton
+                    runat="server"
+                    CssClass="btn btn-sm btn-danger"
+                    CommandName="Apagar"
+                    CommandArgument='<%# Eval("veiculo_id") %>'
+                    OnClientClick="return confirm('Deseja realmente apagar este veículo?');">
+                    <i class="bi bi-trash"></i>
+                </asp:LinkButton>
+
+            </ItemTemplate>
+        </asp:TemplateField>
+
                                         </Columns>
 
                                     </asp:GridView>
