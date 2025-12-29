@@ -20,6 +20,11 @@ public partial class Dashboard : System.Web.UI.Page
             CarregarVeiculos();
     }
 
+    protected void btnVeiculoForm_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("VeiculoForm.aspx");
+    }
+
     private void CarregarVeiculos()
     {
         string cs = ConfigurationManager
