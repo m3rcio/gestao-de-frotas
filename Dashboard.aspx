@@ -58,9 +58,9 @@
 
                                 <div class="table-responsive mt-4">
                                      <asp:Button
-                        ID="btnDashboard"
+                        ID="btnVeiculoForm"
                          runat="server"
-                         Text="Ir para Dashboard"
+                         Text="Adicionar Veículo"
                          CssClass="btn btn-secondary mt-3"
                          CausesValidation="false"
                          OnClick="btnVeiculoForm_Click" />
