@@ -79,7 +79,6 @@
                                             <asp:BoundField DataField="Ano" HeaderText="Ano" />
                                             <asp:BoundField DataField="Estado" HeaderText="Estado" />
 
-                                              <!-- AÇÕES -->
         <asp:TemplateField HeaderText="Ações">
             <ItemTemplate>
 
