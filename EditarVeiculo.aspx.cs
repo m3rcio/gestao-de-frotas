@@ -66,7 +66,7 @@ public partial class EditarVeiculo : System.Web.UI.Page
                            ano = @ano,
                            quilometragem = @km,
                            estado = @estado
-                       WHERE id = @id";
+                       WHERE veiculo_id = @id";
 
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@matricula", txtMatricula.Text);
