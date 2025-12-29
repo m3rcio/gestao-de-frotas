@@ -65,7 +65,7 @@ public partial class Dashboard : System.Web.UI.Page
     private void CarregarVeiculos()
     {
         string cs = ConfigurationManager
-                   .ConnectionStrings["DB"].ConnectionString;
+                   .ConnectionStrings["DefaultConnection"].ConnectionString;
 
         using (SqlConnection con = new SqlConnection(cs))
         {

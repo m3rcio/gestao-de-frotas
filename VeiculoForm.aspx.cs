@@ -23,7 +23,7 @@ public partial class VeiculoForm : System.Web.UI.Page
     protected void btnSalvar_Click(object sender, EventArgs e)
     {
         string cs = ConfigurationManager
-                        .ConnectionStrings["DB"].ConnectionString;
+                        .ConnectionStrings["DefaultConnection"].ConnectionString;
 
         using (SqlConnection con = new SqlConnection(cs))
         {

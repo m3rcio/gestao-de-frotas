@@ -30,7 +30,7 @@ public partial class EditarVeiculo : System.Web.UI.Page
 
     void CarregarVeiculo(int id)
     {
-        string cs = @"SUA_CONNECTION_STRING";
+        string cs = @"DefaultConnection";
 
         using (SqlConnection con = new SqlConnection(cs))
         {
