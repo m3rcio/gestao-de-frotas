@@ -50,4 +50,37 @@ public partial class EditarVeiculo : System.Web.UI.Page
             }
         }
     }
+
+    protected void btnAtualizar_Click(object sender, EventArgs e)
+    {
+        int id = int.Parse(Request.QueryString["id"]);
+
+        string cs = @"SUA_CONNECTION_STRING";
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            string sql = @"UPDATE Veiculos
+                       SET matricula = @matricula,
+                           marca = @marca,
+                           modelo = @modelo,
+                           ano = @ano,
+                           quilometragem = @km,
+                           estado = @estado
+                       WHERE id = @id";
+
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@matricula", txtMatricula.Text);
+            cmd.Parameters.AddWithValue("@marca", txtMarca.Text);
+            cmd.Parameters.AddWithValue("@modelo", txtModelo.Text);
+            cmd.Parameters.AddWithValue("@ano", int.Parse(txtAno.Text));
+            cmd.Parameters.AddWithValue("@km", int.Parse(txtKm.Text));
+            cmd.Parameters.AddWithValue("@estado", ddlEstado.SelectedValue);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+        }
+
+        Response.Redirect("Dashboard.aspx");
+    }
 }
