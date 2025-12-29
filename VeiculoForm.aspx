@@ -54,6 +54,13 @@
                         <h5 class="card-title fw-semibold mb-4">
                             Registre um Veículo
                         </h5>
+                        <asp:Button
+                        ID="btnDashboard"
+                         runat="server"
+                         Text="Ir para Dashboard"
+                         CssClass="btn btn-secondary mt-3"
+                         CausesValidation="false"
+                         OnClick="btnDashboard_Click" />
 
                         <div class="card">
                             <div class="card-body">
