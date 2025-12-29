@@ -31,7 +31,7 @@ public partial class EditarVeiculo : System.Web.UI.Page
         {
             string sql = @"SELECT matricula, marca, modelo, ano, quilometragem, estado
                            FROM Veiculos
-                           WHERE id = @id";
+                           WHERE veiculo_id = @id";
 
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@id", id);
