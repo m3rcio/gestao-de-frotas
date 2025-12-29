@@ -15,6 +15,11 @@ public partial class VeiculoForm : System.Web.UI.Page
             Response.Redirect("Default.aspx");
     }
 
+    protected void btnDashboard_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Dashboard.aspx");
+    }
+
     protected void btnSalvar_Click(object sender, EventArgs e)
     {
         string cs = ConfigurationManager
