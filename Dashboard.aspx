@@ -89,6 +89,9 @@
                     CssClass="btn btn-sm btn-warning me-1"
                     CommandName="Editar"
                     CommandArgument='<%# Eval("veiculo_id") %>'>
+                    <a href='EditarVeiculo.aspx?id=<%# Eval("id") %>' class="btn btn-sm btn-warning">
+                        <i class="bi bi-pencil"></i>
+                            </a>
                     <i class="bi bi-pencil-square"></i>
                 </asp:LinkButton>
 
