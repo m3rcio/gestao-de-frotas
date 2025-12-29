@@ -20,6 +20,22 @@ public partial class Dashboard : System.Web.UI.Page
             CarregarVeiculos();
     }
 
+    protected void gvVeiculos_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        int veiculoId = Convert.ToInt32(e.CommandArgument);
+
+        if (e.CommandName == "Editar")
+        {
+            Response.Redirect("VeiculoForm.aspx?id=" + veiculoId);
+        }
+
+        if (e.CommandName == "Apagar")
+        {
+            ApagarVeiculo(veiculoId);
+            CarregarVeiculos(); 
+        }
+    }
+
     protected void btnVeiculoForm_Click(object sender, EventArgs e)
     {
         Response.Redirect("VeiculoForm.aspx");
