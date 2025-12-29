@@ -107,12 +107,12 @@
                                 </div>
 
 
-                                <div class="mb-3">
-                                    <asp:Button ID="btnSalvar" runat="server"
-                                        Text="Salvar Veículo"
-                                        CssClass="btn btn-primary"
-                                        OnClick="btnSalvar_Click" />
-                                </div>
+                                <asp:Button
+                                ID="btnAtualizar"
+                                 runat="server"
+                                 Text="Atualizar"
+                                 CssClass="btn btn-success mt-3"
+                                 OnClick="btnAtualizar_Click" />
 
                                 <asp:Label ID="lblMsg" runat="server"
                                     CssClass="text-success"
