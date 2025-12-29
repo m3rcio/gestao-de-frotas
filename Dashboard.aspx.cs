@@ -62,7 +62,7 @@ public partial class Dashboard : System.Web.UI.Page
         Response.Redirect("EditarVeiculo.aspx?id=" + e.CommandArgument);
     }
 
-    private void CarregarVeiculo(int id)
+    private void CarregarVeiculos(int id)
     {
         string cs = ConfigurationManager
                     .ConnectionStrings["DefaultConnection"]
