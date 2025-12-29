@@ -46,7 +46,7 @@
                     <div class="card-body">
 
                         <h5 class="card-title fw-semibold mb-4">
-                            Registre um Veículo
+                            Editar Veículo 
                         </h5>
                         <asp:Button
                         ID="btnDashboard"
