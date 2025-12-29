@@ -60,7 +60,9 @@ public partial class EditarVeiculo : System.Web.UI.Page
     {
         int id = int.Parse(Request.QueryString["id"]);
 
-        string cs = @"SUA_CONNECTION_STRING";
+        string cs = ConfigurationManager
+                    .ConnectionStrings["DefaultConnection"]
+                    .ConnectionString;
 
         using (SqlConnection con = new SqlConnection(cs))
         {
