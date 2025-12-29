@@ -68,7 +68,8 @@
                                     <asp:GridView ID="gvVeiculos"
                                         runat="server"
                                         CssClass="table mb-0 text-nowrap varient-table align-middle fs-3"
-                                        AutoGenerateColumns="false">
+                                        AutoGenerateColumns="false" DataKeyNames="veiculo_id"
+                                        OnRowCommand="gvVeiculos_RowCommand">
 
                                         <Columns>
                                             <asp:BoundField DataField="veiculo_id" HeaderText="ID" />
