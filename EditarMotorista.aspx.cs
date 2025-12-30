@@ -37,9 +37,9 @@ public partial class EditarMotorista : System.Web.UI.Page
 
         using (SqlConnection con = new SqlConnection(cs))
         {
-            string sql = @"SELECT Matricula, Marca, Modelo, Ano, Quilometragem, Estado
-                       FROM Veiculos
-                       WHERE veiculo_id = @id";
+            string sql = @"SELECT Nome, Contacto, Carta,Morada
+                       FROM Motoristas
+                       WHERE motorista_id = @id";
 
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@id", id);
