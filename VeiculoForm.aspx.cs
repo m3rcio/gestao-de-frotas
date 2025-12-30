@@ -46,6 +46,12 @@ public partial class VeiculoForm : System.Web.UI.Page
             cmd.ExecuteNonQuery();
         }
 
+        txtMatricula.Text = "";
+        txtMarca.Text = "";
+        txtModelo.Text = "";
+        txtAno.Text = "";
+        txtKm.Text = "";
+
         lblMsg.Text = "Veículo inserido com sucesso";
         lblMsg.Visible = true;
     }
