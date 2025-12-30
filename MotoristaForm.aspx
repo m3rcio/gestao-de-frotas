@@ -46,7 +46,7 @@
                     <div class="card-body">
 
                         <h5 class="card-title fw-semibold mb-4">
-                            Registre um Veículo
+                            Registre um Motorista
                         </h5>
                         <asp:Button
                         ID="btnDashboard"
@@ -62,25 +62,25 @@
                                 <!-- FORM ASP.NET -->
                                 <div class="mb-3">
                                     <label class="form-label">Nome</label>
-                                    <asp:TextBox ID="txtMarca" runat="server"
+                                    <asp:TextBox ID="txtNome" runat="server"
                                         CssClass="form-control" />
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label">Contacto</label>
-                                    <asp:TextBox ID="txtModelo" runat="server"
+                                    <asp:TextBox ID="txtContacto" runat="server"
                                         CssClass="form-control" />
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label">Carta</label>
-                                    <asp:TextBox ID="txtMatricula" runat="server"
+                                    <asp:TextBox ID="txtCarta" runat="server"
                                         CssClass="form-control" />
                                 </div>
 
                                 <div class="mb-3">
                                  <label class="form-label">Morada</label>
-                                <asp:TextBox ID="txtKm" runat="server"
+                                <asp:TextBox ID="txtMorada" runat="server"
                                   CssClass="form-control"
                                   TextMode="Number" />
                                  </div>
