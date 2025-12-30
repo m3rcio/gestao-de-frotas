@@ -28,22 +28,17 @@ public partial class DashboardMotoristas : System.Web.UI.Page
         using (SqlConnection con = new SqlConnection(cs))
         {
             string sql = @"SELECT 
-                           veiculo_id,
-                           Marca,
-                           Modelo,
-                           Matricula,
-                           Quilometragem,
-                           Ano,
-                           Estado
-                       FROM Veiculos
-                       ORDER BY veiculo_id DESC";
+                           motorista_id,
+                           
+                       FROM Motoristas
+                       ORDER BY motorista_id DESC";
 
             SqlDataAdapter da = new SqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            gvVeiculos.DataSource = dt;
-            gvVeiculos.DataBind();
+            gvMotoristas.DataSource = dt;
+            gvMotoristas.DataBind();
         }
     }
 }
