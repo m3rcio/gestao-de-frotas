@@ -75,7 +75,7 @@
                                         OnRowCommand="gvMotoristas_RowCommand">
 
                                         <Columns>
-                                            <asp:BoundField DataField="veiculo_id" HeaderText="ID" />
+                                            <asp:BoundField DataField="motorista_id" HeaderText="ID" />
                                             <asp:BoundField DataField="Nome" HeaderText="Nome" />
                                             <asp:BoundField DataField="Contacto" HeaderText="Contacto" />
                                             <asp:BoundField DataField="Carta" HeaderText="Carta" />

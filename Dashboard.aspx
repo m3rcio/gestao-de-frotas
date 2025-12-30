@@ -38,7 +38,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" runat="server" href="~/DashboardMotoristas.aspx">
+                        <a class="sidebar-link" runat="server" href="/DashboardMotoristas.aspx">
                             <i class="ti ti-atom"></i>
                             <span class="hide-menu">Motoristas</span>
                         </a>
