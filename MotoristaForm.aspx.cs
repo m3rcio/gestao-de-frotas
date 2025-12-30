@@ -12,4 +12,9 @@ public partial class MotoristaForm : System.Web.UI.Page
         if (Session["Logado"] == null)
             Response.Redirect("Default.aspx");
     }
+
+    protected void btnDashboard_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Dashboard.aspx");
+    }
 }
