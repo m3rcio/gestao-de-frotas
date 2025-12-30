@@ -19,7 +19,7 @@
         <div>
             <div class="brand-logo d-flex align-items-center justify-content-between">
                 <a runat="server" href="~/Dashboard.aspx" class="text-nowrap logo-img">
-                <img src="<%= ResolveUrl("~/assets/images/logos/logo.svg") %>" />
+            <!--    <img src="<%= ResolveUrl("~/assets/images/logos/logo.svg") %>" /> -->Home Page
                 </a>
             </div>  
 
