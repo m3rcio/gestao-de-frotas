@@ -69,13 +69,12 @@ public partial class EditarMotorista : System.Web.UI.Page
         using (SqlConnection con = new SqlConnection(cs))
         {
             string sql = @"UPDATE Veiculos
-                       SET matricula = @matricula,
-                           marca = @marca,
-                           modelo = @modelo,
-                           ano = @ano,
-                           quilometragem = @km,
-                           estado = @estado
-                       WHERE veiculo_id = @id";
+                       SET nome = @nome,
+                           contacto = @contacto,
+                           carta = @carta,
+                           morada = @morada
+                          
+                       WHERE motorista_id = @id";
 
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@matricula", txtMatricula.Text);
