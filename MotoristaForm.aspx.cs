@@ -17,4 +17,40 @@ public partial class MotoristaForm : System.Web.UI.Page
     {
         Response.Redirect("Dashboard.aspx");
     }
+
+    protected void btnSalvar_Click(object sender, EventArgs e)
+    {
+        string cs = ConfigurationManager
+                        .ConnectionStrings["DefaultConnection"].ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            string sql = @"INSERT INTO Veiculos
+                          (Matricula, Marca, Modelo, Ano, Quilometragem, Estado)
+                           VALUES
+                          (@Matricula, @Marca, @Modelo, @Ano, @Km, @Estado)";
+
+            SqlCommand cmd = new SqlCommand(sql, con);
+
+            cmd.Parameters.AddWithValue("@Matricula", txtMatricula.Text);
+            cmd.Parameters.AddWithValue("@Marca", txtMarca.Text);
+            cmd.Parameters.AddWithValue("@Modelo", txtModelo.Text);
+            cmd.Parameters.AddWithValue("@Ano", int.Parse(txtAno.Text));
+            cmd.Parameters.AddWithValue("@Km", int.Parse(txtKm.Text));
+            cmd.Parameters.AddWithValue("@Estado", ddlEstado.SelectedValue);
+
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+        }
+
+        txtMatricula.Text = "";
+        txtMarca.Text = "";
+        txtModelo.Text = "";
+        txtAno.Text = "";
+        txtKm.Text = "";
+
+        lblMsg.Text = "Veículo inserido com sucesso";
+        lblMsg.Visible = true;
+    }
 }
