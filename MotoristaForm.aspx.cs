@@ -44,13 +44,12 @@ public partial class MotoristaForm : System.Web.UI.Page
             cmd.ExecuteNonQuery();
         }
 
-        txtMatricula.Text = "";
-        txtMarca.Text = "";
-        txtModelo.Text = "";
-        txtAno.Text = "";
-        txtKm.Text = "";
+        txtNome.Text = "";
+        txtContacto.Text = "";
+        txtCarta.Text = "";
+        txtMorada.Text = "";
 
-        lblMsg.Text = "Veículo inserido com sucesso";
+        lblMsg.Text = "Motorista inserido com sucesso!";
         lblMsg.Visible = true;
     }
 }
