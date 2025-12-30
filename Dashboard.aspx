@@ -17,11 +17,11 @@
     <!-- SIDEBAR -->
     <aside class="left-sidebar">
         <div>
-            <!--<div class="brand-logo d-flex align-items-center justify-content-between">
+            <div class="brand-logo d-flex align-items-center justify-content-between">
                 <a runat="server" href="~/Dashboard.aspx" class="text-nowrap logo-img">
                 <img src="<%= ResolveUrl("~/assets/images/logos/logo.svg") %>" />
                 </a>
-            </div>  -->
+            </div>  
 
             <nav class="sidebar-nav scroll-sidebar">
                 <ul id="sidebarnav">
