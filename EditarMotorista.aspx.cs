@@ -77,10 +77,10 @@ public partial class EditarMotorista : System.Web.UI.Page
                        WHERE motorista_id = @id";
 
             SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@matricula", txtMatricula.Text);
-            cmd.Parameters.AddWithValue("@marca", txtMarca.Text);
-            cmd.Parameters.AddWithValue("@modelo", txtModelo.Text);
-            cmd.Parameters.AddWithValue("@ano", int.Parse(txtAno.Text));
+            cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+            cmd.Parameters.AddWithValue("@contacto", txtContacto.Text);
+            cmd.Parameters.AddWithValue("@carta", txtCarta.Text);
+            cmd.Parameters.AddWithValue("@morada", int.Parse(txtmoradas.Text));
             cmd.Parameters.AddWithValue("@km", int.Parse(txtKm.Text));
             cmd.Parameters.AddWithValue("@estado", ddlEstado.SelectedValue);
             cmd.Parameters.AddWithValue("@id", id);
