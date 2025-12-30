@@ -61,19 +61,19 @@
 
                                 <!-- FORM ASP.NET -->
                                 <div class="mb-3">
-                                    <label class="form-label">Marca</label>
+                                    <label class="form-label">Nome</label>
                                     <asp:TextBox ID="txtMarca" runat="server"
                                         CssClass="form-control" />
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label">Modelo</label>
+                                    <label class="form-label">Contacto</label>
                                     <asp:TextBox ID="txtModelo" runat="server"
                                         CssClass="form-control" />
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label">Matrícula</label>
+                                    <label class="form-label">Carta</label>
                                     <asp:TextBox ID="txtMatricula" runat="server"
                                         CssClass="form-control" />
                                 </div>
@@ -85,7 +85,7 @@
                                 </div> -->
 
                                 <div class="mb-3">
-                                 <label class="form-label">Quilometragem</label>
+                                 <label class="form-label">Morada</label>
                                 <asp:TextBox ID="txtKm" runat="server"
                                   CssClass="form-control"
                                   TextMode="Number" />
