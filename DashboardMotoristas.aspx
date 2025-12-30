@@ -100,7 +100,7 @@
                     CssClass="btn btn-sm btn-danger"
                     CommandName="Apagar"
                     CommandArgument='<%# Eval("motorista_id") %>'
-                    OnClientClick="return confirm('Deseja realmente apagar este veículo?');">
+                    OnClientClick="return confirm('Deseja realmente apagar este motorista?');">
                     <i class="bi bi-trash"></i>
                 </asp:LinkButton>
 

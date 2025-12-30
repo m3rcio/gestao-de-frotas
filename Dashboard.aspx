@@ -33,12 +33,12 @@
                     <li class="sidebar-item">
                         <a class="sidebar-link" runat="server" href="~/Dashboard.aspx">
                             <i class="ti ti-atom"></i>
-                            <span class="hide-menu">Dashboard</span>
+                            <span class="hide-menu">Veículos</span>
                         </a>
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" runat="server" href="~/MotoristaForm.aspx">
+                        <a class="sidebar-link" runat="server" href="~/DashboardMotoristas.aspx">
                             <i class="ti ti-atom"></i>
                             <span class="hide-menu">Motoristas</span>
                         </a>
