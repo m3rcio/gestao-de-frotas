@@ -29,7 +29,7 @@
                     <li class="sidebar-item">
                         <a class="sidebar-link" runat="server" href="~/Dashboard.aspx">
                             <i class="ti ti-atom"></i>
-                            <span class="hide-menu">Dashboard</span>
+                            <span class="hide-menu">Veículos</span>
                         </a>
                     </li>
 
@@ -56,23 +56,23 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <h4 class="card-title">Veículos</h4>
+                                <h4 class="card-title">Motoristas</h4>
                                
 
                                 <div class="table-responsive mt-4">
                                      <asp:Button
-                        ID="btnVeiculoForm"
+                        ID="btnMotoristaForm"
                          runat="server"
-                         Text="Adicionar Veículo"
+                         Text="Adicionar Motorista"
                          CssClass="btn btn-secondary mt-3"
                          CausesValidation="false"
-                         OnClick="btnVeiculoForm_Click" />
+                         OnClick="btnMotoristaForm_Click" />
                                     <!-- TABELA EM ASP.NET -->
-                                    <asp:GridView ID="gvVeiculos"
+                                    <asp:GridView ID="gvMotoristas"
                                         runat="server"
                                         CssClass="table mb-0 text-nowrap varient-table align-middle fs-3"
-                                        AutoGenerateColumns="false" DataKeyNames="veiculo_id"
-                                        OnRowCommand="gvVeiculos_RowCommand">
+                                        AutoGenerateColumns="false" DataKeyNames="motorista_id"
+                                        OnRowCommand="gvMotoristas_RowCommand">
 
                                         <Columns>
                                             <asp:BoundField DataField="veiculo_id" HeaderText="ID" />
