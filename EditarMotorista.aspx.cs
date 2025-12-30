@@ -49,12 +49,11 @@ public partial class EditarMotorista : System.Web.UI.Page
 
             if (dr.Read())
             {
-                txtMatricula.Text = dr["matricula"].ToString();
-                txtMarca.Text = dr["marca"].ToString();
-                txtModelo.Text = dr["modelo"].ToString();
-                txtAno.Text = dr["ano"].ToString();
-                txtKm.Text = dr["quilometragem"].ToString();
-                ddlEstado.SelectedValue = dr["estado"].ToString();
+                txtNome.Text = dr["Nome"].ToString();
+                txtContacto.Text = dr["Contacto"].ToString();
+                txtCarta.Text = dr["Carta"].ToString();
+                txtMorada.Text = dr["Morada"].ToString();
+      
             }
         }
     }
