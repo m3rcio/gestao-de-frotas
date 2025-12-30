@@ -34,10 +34,10 @@ public partial class MotoristaForm : System.Web.UI.Page
 
             SqlCommand cmd = new SqlCommand(sql, con);
 
-            cmd.Parameters.AddWithValue("@Matricula", txtNome.Text);
-            cmd.Parameters.AddWithValue("@Marca", txtContacto.Text);
-            cmd.Parameters.AddWithValue("@Modelo", txtCarta.Text);
-            cmd.Parameters.AddWithValue("@Ano", txtMorada.Text);
+            cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
+            cmd.Parameters.AddWithValue("@Contacto", txtContacto.Text);
+            cmd.Parameters.AddWithValue("@Carta", txtCarta.Text);
+            cmd.Parameters.AddWithValue("@Morada", txtMorada.Text);
 
             con.Open();
             cmd.ExecuteNonQuery();
