@@ -27,10 +27,10 @@ public partial class MotoristaForm : System.Web.UI.Page
 
         using (SqlConnection con = new SqlConnection(cs))
         {
-            string sql = @"INSERT INTO Veiculos
-                          (Matricula, Marca, Modelo, Ano, Quilometragem, Estado)
+            string sql = @"INSERT INTO Motoristas
+                          (Nome, Contacto, Carta, Morada)
                            VALUES
-                          (@Matricula, @Marca, @Modelo, @Ano, @Km, @Estado)";
+                          (@Nome, @Contacto, @Carta, @Morada)";
 
             SqlCommand cmd = new SqlCommand(sql, con);
 
