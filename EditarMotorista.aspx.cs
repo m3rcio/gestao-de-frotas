@@ -18,7 +18,7 @@ public partial class EditarMotorista : System.Web.UI.Page
             }
 
             int id = int.Parse(Request.QueryString["id"]);
-            CarregarVeiculo(id);
+            CarregarMotorista(id);
         }
     }
 }
