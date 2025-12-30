@@ -21,4 +21,9 @@ public partial class EditarMotorista : System.Web.UI.Page
             CarregarMotorista(id);
         }
     }
+
+    protected void btnDashboard_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Dashboard.aspx");
+    }
 }
