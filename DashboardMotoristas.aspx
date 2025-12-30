@@ -76,12 +76,10 @@
 
                                         <Columns>
                                             <asp:BoundField DataField="veiculo_id" HeaderText="ID" />
-                                            <asp:BoundField DataField="Marca" HeaderText="Marca" />
-                                            <asp:BoundField DataField="Modelo" HeaderText="Modelo" />
-                                            <asp:BoundField DataField="Matricula" HeaderText="Matricula" />
-                                            <asp:BoundField DataField="Quilometragem" HeaderText="Quilometragem" />
-                                            <asp:BoundField DataField="Ano" HeaderText="Ano" />
-                                            <asp:BoundField DataField="Estado" HeaderText="Estado" />
+                                            <asp:BoundField DataField="Nome" HeaderText="Nome" />
+                                            <asp:BoundField DataField="Contacto" HeaderText="Contacto" />
+                                            <asp:BoundField DataField="Carta" HeaderText="Carta" />
+                                            <asp:BoundField DataField="Morada" HeaderText="Morada" />
 
         <asp:TemplateField HeaderText="Ações">
             <ItemTemplate>
@@ -90,7 +88,7 @@
                 <asp:LinkButton
                 runat="server"
                 CssClass="btn btn-sm btn-warning me-1"
-                CommandArgument='<%# Eval("veiculo_id") %>'
+                CommandArgument='<%# Eval("motorista_id") %>'
                 OnCommand="Editar_Command">
                 <i class="bi bi-pencil"></i>
                 </asp:LinkButton>
@@ -101,7 +99,7 @@
                     runat="server"
                     CssClass="btn btn-sm btn-danger"
                     CommandName="Apagar"
-                    CommandArgument='<%# Eval("veiculo_id") %>'
+                    CommandArgument='<%# Eval("motorista_id") %>'
                     OnClientClick="return confirm('Deseja realmente apagar este veículo?');">
                     <i class="bi bi-trash"></i>
                 </asp:LinkButton>
