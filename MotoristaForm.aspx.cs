@@ -37,7 +37,7 @@ public partial class MotoristaForm : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@Matricula", txtNome.Text);
             cmd.Parameters.AddWithValue("@Marca", txtContacto.Text);
             cmd.Parameters.AddWithValue("@Modelo", txtCarta.Text);
-            cmd.Parameters.AddWithValue("@Ano", int.Parse(txtMorada.Text));
+            cmd.Parameters.AddWithValue("@Ano", txtMorada.Text);
 
             con.Open();
             cmd.ExecuteNonQuery();
