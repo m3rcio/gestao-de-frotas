@@ -73,4 +73,9 @@ public partial class DashboardMotoristas : System.Web.UI.Page
             cmd.ExecuteNonQuery();
         }
     }
+
+    protected void btnVeiculoForm_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("MotoristaForm.aspx");
+    }
 }
