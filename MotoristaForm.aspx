@@ -87,7 +87,7 @@
 
                                 <div class="mb-3">
                                     <asp:Button ID="btnSalvar" runat="server"
-                                        Text="Salvar Veículo"
+                                        Text="Salvar Motorista"
                                         CssClass="btn btn-primary"
                                         OnClick="btnSalvar_Click" />
                                 </div>
