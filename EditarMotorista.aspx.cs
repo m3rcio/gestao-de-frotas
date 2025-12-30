@@ -26,4 +26,34 @@ public partial class EditarMotorista : System.Web.UI.Page
     {
         Response.Redirect("Dashboard.aspx");
     }
+
+    private void CarregarMotorista(int id)
+    {
+        string cs = ConfigurationManager
+                    .ConnectionStrings["DefaultConnection"]
+                    .ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            string sql = @"SELECT Matricula, Marca, Modelo, Ano, Quilometragem, Estado
+                       FROM Veiculos
+                       WHERE veiculo_id = @id";
+
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.Read())
+            {
+                txtMatricula.Text = dr["matricula"].ToString();
+                txtMarca.Text = dr["marca"].ToString();
+                txtModelo.Text = dr["modelo"].ToString();
+                txtAno.Text = dr["ano"].ToString();
+                txtKm.Text = dr["quilometragem"].ToString();
+                ddlEstado.SelectedValue = dr["estado"].ToString();
+            }
+        }
+    }
 }
