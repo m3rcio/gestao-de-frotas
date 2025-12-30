@@ -29,7 +29,7 @@ public partial class DashboardMotoristas : System.Web.UI.Page
         {
             string sql = @"SELECT 
                            motorista_id,
-                           
+                           Nome, Contacto, Carta, Morada
                        FROM Motoristas
                        ORDER BY motorista_id DESC";
 
