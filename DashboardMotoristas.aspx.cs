@@ -41,4 +41,20 @@ public partial class DashboardMotoristas : System.Web.UI.Page
             gvMotoristas.DataBind();
         }
     }
+
+    protected void gvMotoristas_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        int veiculoId = Convert.ToInt32(e.CommandArgument);
+
+        if (e.CommandName == "Editar")
+        {
+            Response.Redirect("VeiculoForm.aspx?id=" + veiculoId);
+        }
+
+        if (e.CommandName == "Apagar")
+        {
+            ApagarVeiculo(veiculoId);
+            CarregarVeiculos();
+        }
+    }
 }
