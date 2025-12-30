@@ -9,6 +9,10 @@ public partial class DashboardMotoristas : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["Logado"] == null)
+            Response.Redirect("Default.aspx");
 
+        if (!IsPostBack)
+            CarregarVeiculos();
     }
 }
