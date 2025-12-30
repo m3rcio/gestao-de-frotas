@@ -74,8 +74,13 @@ public partial class DashboardMotoristas : System.Web.UI.Page
         }
     }
 
-    protected void btnVeiculoForm_Click(object sender, EventArgs e)
+    protected void btnMotoristaForm_Click(object sender, EventArgs e)
     {
         Response.Redirect("MotoristaForm.aspx");
+    }
+
+    protected void Editar_Command(object sender, CommandEventArgs e)
+    {
+        Response.Redirect("EditarMotorista.aspx?id=" + e.CommandArgument);
     }
 }
