@@ -44,17 +44,17 @@ public partial class DashboardMotoristas : System.Web.UI.Page
 
     protected void gvMotoristas_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        int veiculoId = Convert.ToInt32(e.CommandArgument);
+        int motoristaId = Convert.ToInt32(e.CommandArgument);
 
         if (e.CommandName == "Editar")
         {
-            Response.Redirect("VeiculoForm.aspx?id=" + veiculoId);
+            Response.Redirect("MotoristaForm.aspx?id=" + motoristaId);
         }
 
         if (e.CommandName == "Apagar")
         {
-            ApagarVeiculo(veiculoId);
-            CarregarVeiculos();
+            ApagarMotorista(motoristaId);
+            CarregarMotoristas();
         }
     }
 }
