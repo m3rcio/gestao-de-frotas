@@ -37,6 +37,13 @@
                         </a>
                     </li>
 
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" runat="server" href="~/MotoristaForm.aspx">
+                            <i class="ti ti-atom"></i>
+                            <span class="hide-menu">Motoristas</span>
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
         </div>

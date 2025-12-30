@@ -82,7 +82,7 @@
                                  <label class="form-label">Morada</label>
                                 <asp:TextBox ID="txtMorada" runat="server"
                                   CssClass="form-control"
-                                  TextMode="Number" />
+                                   />
                                  </div>
 
                                 <div class="mb-3">
