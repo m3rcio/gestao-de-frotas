@@ -68,7 +68,7 @@ public partial class EditarMotorista : System.Web.UI.Page
 
         using (SqlConnection con = new SqlConnection(cs))
         {
-            string sql = @"UPDATE Veiculos
+            string sql = @"UPDATE Motoristas
                        SET nome = @nome,
                            contacto = @contacto,
                            carta = @carta,
@@ -80,9 +80,7 @@ public partial class EditarMotorista : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@nome", txtNome.Text);
             cmd.Parameters.AddWithValue("@contacto", txtContacto.Text);
             cmd.Parameters.AddWithValue("@carta", txtCarta.Text);
-            cmd.Parameters.AddWithValue("@morada", int.Parse(txtmoradas.Text));
-            cmd.Parameters.AddWithValue("@km", int.Parse(txtKm.Text));
-            cmd.Parameters.AddWithValue("@estado", ddlEstado.SelectedValue);
+            cmd.Parameters.AddWithValue("@morada", txtMorada.Text);
             cmd.Parameters.AddWithValue("@id", id);
 
             con.Open();
