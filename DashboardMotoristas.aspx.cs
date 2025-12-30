@@ -57,4 +57,20 @@ public partial class DashboardMotoristas : System.Web.UI.Page
             CarregarMotoristas();
         }
     }
+
+    private void ApagarMotorista(int id)
+    {
+        string cs = ConfigurationManager
+                        .ConnectionStrings["DefaultConnection"].ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            string sql = "DELETE FROM Motoristas WHERE motorista_id = @id";
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+        }
+    }
 }
