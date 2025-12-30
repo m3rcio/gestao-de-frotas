@@ -87,10 +87,10 @@
                                  </div>
 
                                 <div class="mb-3">
-                                    <asp:Button ID="btnSalvar" runat="server"
-                                        Text="Salvar Veículo"
+                                    <asp:Button ID="btnAtualizar" runat="server"
+                                        Text="Salvar Motorista"
                                         CssClass="btn btn-primary"
-                                        OnClick="btnSalvar_Click" />
+                                        OnClick="btnAtualizar_Click" />
                                 </div>
 
                                 <asp:Label ID="lblMsg" runat="server"
