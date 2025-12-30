@@ -78,12 +78,6 @@
                                         CssClass="form-control" />
                                 </div>
 
-                               <!-- <div class="mb-3">
-                                    <label class="form-label">Localização</label>
-                                    <asp:TextBox ID="txtLocalizacao" runat="server"
-                                        CssClass="form-control" />
-                                </div> -->
-
                                 <div class="mb-3">
                                  <label class="form-label">Morada</label>
                                 <asp:TextBox ID="txtKm" runat="server"
