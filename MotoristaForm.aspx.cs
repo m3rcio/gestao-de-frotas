@@ -38,9 +38,6 @@ public partial class MotoristaForm : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@Marca", txtContacto.Text);
             cmd.Parameters.AddWithValue("@Modelo", txtCarta.Text);
             cmd.Parameters.AddWithValue("@Ano", int.Parse(txtMorada.Text));
-            cmd.Parameters.AddWithValue("@Km", int.Parse(txtKm.Text));
-            cmd.Parameters.AddWithValue("@Estado", ddlEstado.SelectedValue);
-
 
             con.Open();
             cmd.ExecuteNonQuery();
