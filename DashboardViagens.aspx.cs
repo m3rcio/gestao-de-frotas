@@ -86,4 +86,9 @@ public partial class DashboardViagens : System.Web.UI.Page
     {
         Response.Redirect("ViagemForm.aspx");
     }
+
+    protected void Editar_Command(object sender, CommandEventArgs e)
+    {
+        Response.Redirect("EditarViagem.aspx?id=" + e.CommandArgument);
+    }
 }
