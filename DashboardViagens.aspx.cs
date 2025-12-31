@@ -81,4 +81,9 @@ public partial class DashboardViagens : System.Web.UI.Page
             cmd.ExecuteNonQuery();
         }
     }
+
+    protected void btnNovaViagem_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ViagemForm.aspx");
+    }
 }
