@@ -62,4 +62,27 @@ public partial class ViagemForm : System.Web.UI.Page
         }
     }
 
+    protected void btnSalvar_Click(object sender, EventArgs e)
+    {
+        string cs = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            string sql = @"INSERT INTO viagens
+                           (veiculo_id, motorista_id, data_saida, km_saida)
+                           VALUES (@veiculo, @motorista, @data_saida, @km_saida)";
+
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@veiculo", ddlVeiculo.SelectedValue);
+            cmd.Parameters.AddWithValue("@motorista", ddlMotorista.SelectedValue);
+            cmd.Parameters.AddWithValue("@data_saida", DateTime.Parse(txtDataSaida.Text));
+            cmd.Parameters.AddWithValue("@km_saida", int.Parse(txtKmSaida.Text));
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+        }
+
+        Response.Redirect("DashboardViagem.aspx");
+    }
+
 }
