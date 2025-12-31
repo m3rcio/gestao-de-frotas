@@ -50,4 +50,18 @@ public partial class DashboardViagens : System.Web.UI.Page
             gvViagens.DataBind();
         }
     }
+
+    protected void gvViagens_RowCommand(object sender, System.Web.UI.WebControls.GridViewCommandEventArgs e)
+    {
+        int id = Convert.ToInt32(e.CommandArgument);
+
+        if (e.CommandName == "Editar")
+            Response.Redirect("EditarViagem.aspx?id=" + id);
+
+        if (e.CommandName == "Apagar")
+        {
+            ApagarViagem(id);
+            CarregarViagens();
+        }
+    }
 }
