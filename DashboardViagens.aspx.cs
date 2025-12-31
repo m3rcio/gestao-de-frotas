@@ -64,4 +64,21 @@ public partial class DashboardViagens : System.Web.UI.Page
             CarregarViagens();
         }
     }
+
+    void ApagarViagem(int id)
+    {
+        string cs = ConfigurationManager
+            .ConnectionStrings["DefaultConnection"]
+            .ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            string sql = "DELETE FROM viagens WHERE id = @id";
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+        }
+    }
 }
