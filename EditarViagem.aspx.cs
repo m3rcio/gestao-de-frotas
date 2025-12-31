@@ -66,4 +66,44 @@ public partial class EditarViagem : System.Web.UI.Page
         }
     }
 
+    protected void btnAtualizar_Click(object sender, EventArgs e)
+    {
+        int id = int.Parse(Request.QueryString["id"]);
+
+        string cs = ConfigurationManager
+                    .ConnectionStrings["DefaultConnection"]
+                    .ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            string sql = @"
+            UPDATE Viagens
+            SET veiculo_id = @veiculo,
+                motorista_id = @motorista,
+                data_saida = @data_saida,
+                data_retorno = @data_retorno,
+                km_saida = @km_saida,
+                km_retorno = @km_retorno
+            WHERE viagem_id = @id";
+
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@veiculo", ddlVeiculo.SelectedValue);
+            cmd.Parameters.AddWithValue("@motorista", ddlMotorista.SelectedValue);
+            cmd.Parameters.AddWithValue("@data_saida", DateTime.Parse(txtDataSaida.Text));
+            cmd.Parameters.AddWithValue("@data_retorno",
+                string.IsNullOrEmpty(txtDataRetorno.Text)
+                    ? (object)DBNull.Value
+                    : DateTime.Parse(txtDataRetorno.Text));
+            cmd.Parameters.AddWithValue("@km_saida", int.Parse(txtKmSaida.Text));
+            cmd.Parameters.AddWithValue("@km_retorno", int.Parse(txtKmRetorno.Text));
+            cmd.Parameters.AddWithValue("@id", id);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+        }
+
+        Response.Redirect("DashboardViagens.aspx");
+    }
+
+
 }
