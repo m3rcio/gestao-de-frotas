@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="DashboardViagens.aspx.cs" Inherits="DashboardViagens" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
-    <%@ Page Language="C#" AutoEventWireup="true" CodeFile="DashboardViagem.aspx.cs" Inherits="DashboardViagem" %>
 
 <div class="page-wrapper" id="main-wrapper"
      data-layout="vertical"
