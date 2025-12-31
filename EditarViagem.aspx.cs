@@ -27,6 +27,25 @@ public partial class EditarViagem : System.Web.UI.Page
         }
     }
 
+    private void CarregarVeiculos()
+    {
+        string cs = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            SqlDataAdapter da = new SqlDataAdapter(
+                "SELECT veiculo_id, matricula FROM veiculos WHERE estado = 'ativo'", con);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            ddlVeiculo.DataSource = dt;
+            ddlVeiculo.DataTextField = "matricula";
+            ddlVeiculo.DataValueField = "veiculo_id";
+            ddlVeiculo.DataBind();
+        }
+    }
+
     private void CarregarViagem(int id)
     {
         string cs = ConfigurationManager
