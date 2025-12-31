@@ -104,7 +104,7 @@
                                                         runat="server"
                                                         CssClass="btn btn-sm btn-warning me-1"
                                                         CommandName="Editar"
-                                                        CommandArgument='<%# Eval("id") %>'>
+                                                        CommandArgument='<%# Eval("viagem_id") %>'>
                                                         <i class="bi bi-pencil"></i>
                                                     </asp:LinkButton>
 
