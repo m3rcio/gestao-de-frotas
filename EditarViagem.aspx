@@ -118,14 +118,6 @@
                             CssClass="btn btn-success mt-3"
                             OnClick="btnAtualizar_Click" />
 
-                        <asp:Button
-                            ID="btnVoltar"
-                            runat="server"
-                            Text="Voltar"
-                            CssClass="btn btn-secondary mt-3 ms-2"
-                            CausesValidation="false"
-                            OnClick="btnVoltar_Click" />
-
                         <asp:Label
                             ID="lblMsg"
                             runat="server"
