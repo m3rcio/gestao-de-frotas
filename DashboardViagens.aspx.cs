@@ -30,7 +30,7 @@ public partial class DashboardViagens : System.Web.UI.Page
         {
             string sql = @"
                 SELECT 
-                    v.id,
+                    v.viagem_id,
                     ve.matricula AS veiculo,
                     m.nome AS motorista,
                     v.data_saida,
