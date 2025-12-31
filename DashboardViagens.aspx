@@ -74,12 +74,12 @@
                                         runat="server"
                                         CssClass="table mb-0 text-nowrap varient-table align-middle fs-3"
                                         AutoGenerateColumns="false"
-                                        DataKeyNames="id"
+                                        DataKeyNames="viagem_id"
                                         OnRowCommand="gvViagens_RowCommand">
 
                                         <Columns>
 
-                                            <asp:BoundField DataField="id" HeaderText="ID" />
+                                            <asp:BoundField DataField="viagem_id" HeaderText="ID" />
 
                                             <asp:BoundField DataField="veiculo" HeaderText="Veículo" />
                                             <asp:BoundField DataField="motorista" HeaderText="Motorista" />

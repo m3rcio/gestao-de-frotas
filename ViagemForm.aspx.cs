@@ -82,12 +82,12 @@ public partial class ViagemForm : System.Web.UI.Page
             cmd.ExecuteNonQuery();
         }
 
-        Response.Redirect("DashboardViagem.aspx");
+        Response.Redirect("DashboardViagens.aspx");
     }
 
     protected void btnVoltar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("DashboardViagem.aspx");
+        Response.Redirect("DashboardViagens.aspx");
     }
 
 }
