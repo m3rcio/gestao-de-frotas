@@ -42,4 +42,24 @@ public partial class ViagemForm : System.Web.UI.Page
         }
     }
 
+
+    void CarregarMotoristas()
+    {
+        string cs = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            SqlDataAdapter da = new SqlDataAdapter(
+                "SELECT motorista_id, nome FROM motoristas", con);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            ddlMotorista.DataSource = dt;
+            ddlMotorista.DataTextField = "nome";
+            ddlMotorista.DataValueField = "motorista_id";
+            ddlMotorista.DataBind();
+        }
+    }
+
 }
