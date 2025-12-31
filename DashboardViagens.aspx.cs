@@ -73,7 +73,7 @@ public partial class DashboardViagens : System.Web.UI.Page
 
         using (SqlConnection con = new SqlConnection(cs))
         {
-            string sql = "DELETE FROM viagens WHERE id = @id";
+            string sql = "DELETE FROM viagens WHERE viagem_id = @id";
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@id", id);
 
