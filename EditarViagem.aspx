@@ -27,13 +27,13 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" runat="server" href="~/DashboardMotorista.aspx">
+                        <a class="sidebar-link" runat="server" href="~/DashboardMotoristas.aspx">
                             Motoristas
                         </a>
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link active" runat="server" href="~/DashboardViagem.aspx">
+                        <a class="sidebar-link active" runat="server" href="~/DashboardViagens.aspx">
                             Viagens
                         </a>
                     </li>
