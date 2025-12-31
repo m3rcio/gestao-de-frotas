@@ -100,11 +100,11 @@
 
                                                     <!-- EDITAR -->
                                                     <asp:LinkButton
-                                                        runat="server"
-                                                        CssClass="btn btn-sm btn-warning me-1"
-                                                        CommandName="Editar"
-                                                        CommandArgument='<%# Eval("viagem_id") %>'>
-                                                        <i class="bi bi-pencil"></i>
+                                                     runat="server"
+                                                     CssClass="btn btn-sm btn-warning me-1"
+                                                      CommandArgument='<%# Eval("viagem_id") %>'
+                                                      OnCommand="Editar_Command">
+                                                      <i class="bi bi-pencil"></i>
                                                     </asp:LinkButton>
 
                                                     <!-- APAGAR -->
