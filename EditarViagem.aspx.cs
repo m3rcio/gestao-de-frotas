@@ -11,6 +11,9 @@ public partial class EditarViagem : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        CarregarVeiculos();
+        CarregarMotoristas();
+
         if (!IsPostBack)
         {
             if (Request.QueryString["id"] == null)
