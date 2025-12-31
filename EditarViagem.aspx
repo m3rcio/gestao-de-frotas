@@ -112,11 +112,11 @@
                         </div>
 
                         <asp:Button
-                            ID="btnSalvar"
+                            ID="btnAtualizar"
                             runat="server"
-                            Text="Salvar Viagem"
+                            Text="Atualizar Viagem"
                             CssClass="btn btn-success mt-3"
-                            OnClick="btnSalvar_Click" />
+                            OnClick="btnAtualizar_Click" />
 
                         <asp:Button
                             ID="btnVoltar"
