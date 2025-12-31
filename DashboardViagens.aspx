@@ -113,7 +113,7 @@
                                                         runat="server"
                                                         CssClass="btn btn-sm btn-danger"
                                                         CommandName="Apagar"
-                                                        CommandArgument='<%# Eval("id") %>'
+                                                        CommandArgument='<%# Eval("viagem_id") %>'
                                                         OnClientClick="return confirm('Deseja apagar esta viagem?');">
                                                         <i class="bi bi-trash"></i>
                                                     </asp:LinkButton>
