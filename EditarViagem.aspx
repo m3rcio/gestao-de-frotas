@@ -95,7 +95,7 @@
                         <div class="mb-3">
                             <label class="form-label">Data de Retorno</label>
                             <asp:TextBox
-                                ID="TextBox1"
+                                ID="txtDataRetorno"
                                 runat="server"
                                 CssClass="form-control"
                                 TextMode="DateTimeLocal" />
@@ -105,7 +105,7 @@
                         <div class="mb-3">
                             <label class="form-label">KM de Retorno</label>
                             <asp:TextBox
-                                ID="TextBox2"
+                                ID="txtKmRetorno"
                                 runat="server"
                                 CssClass="form-control"
                                 TextMode="Number" />
