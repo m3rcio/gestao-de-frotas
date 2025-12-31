@@ -105,5 +105,9 @@ public partial class EditarViagem : System.Web.UI.Page
         Response.Redirect("DashboardViagens.aspx");
     }
 
+    protected void btnDashboard_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("DashboardViagens.aspx");
+    }
 
 }
