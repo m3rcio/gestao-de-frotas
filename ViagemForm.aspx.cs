@@ -85,4 +85,9 @@ public partial class ViagemForm : System.Web.UI.Page
         Response.Redirect("DashboardViagem.aspx");
     }
 
+    protected void btnVoltar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("DashboardViagem.aspx");
+    }
+
 }
