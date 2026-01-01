@@ -69,4 +69,23 @@ public partial class DashboardManutencoes : System.Web.UI.Page
             CarregarManutencoes();
         }
     }
+
+    private void ApagarManutencao(int id)
+    {
+        string cs = ConfigurationManager
+            .ConnectionStrings["DefaultConnection"]
+            .ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            string sql = "DELETE FROM manutencoes WHERE manutencao_id = @id";
+
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+        }
+    }
+
 }
