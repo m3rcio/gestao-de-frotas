@@ -48,4 +48,25 @@ public partial class DashboardManutencoes : System.Web.UI.Page
             gvManutencoes.DataBind();
         }
     }
+
+    protected void btnNovaManutencao_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ManutencaoForm.aspx");
+    }
+
+    protected void gvManutencoes_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        int id = Convert.ToInt32(e.CommandArgument);
+
+        if (e.CommandName == "Editar")
+        {
+            Response.Redirect("EditarManutencao.aspx?id=" + id);
+        }
+
+        if (e.CommandName == "Apagar")
+        {
+            ApagarManutencao(id);
+            CarregarManutencoes();
+        }
+    }
 }
