@@ -33,7 +33,7 @@
                             Registar Manutenção
                         </h5>
 
-                        <!-- VEÍCULO -->
+                      
                         <div class="mb-3">
                             <label class="form-label">Veículo</label>
                             <asp:DropDownList
@@ -42,7 +42,7 @@
                                 CssClass="form-select" />
                         </div>
 
-                        <!-- TIPO -->
+                      
                         <div class="mb-3">
                             <label class="form-label">Tipo</label>
                             <asp:TextBox
@@ -51,7 +51,7 @@
                                 CssClass="form-control" />
                         </div>
 
-                        <!-- CUSTO -->
+                       
                         <div class="mb-3">
                             <label class="form-label">Custo</label>
                             <asp:TextBox
@@ -61,7 +61,7 @@
                                 TextMode="Number" />
                         </div>
 
-                        <!-- DATA -->
+                    
                         <div class="mb-3">
                             <label class="form-label">Data</label>
                             <asp:TextBox
@@ -71,7 +71,7 @@
                                 TextMode="DateTimeLocal" />
                         </div>
 
-                        <!-- DESCRIÇÃO -->
+                        
                         <div class="mb-3">
                             <label class="form-label">Descrição</label>
                             <asp:TextBox
@@ -82,13 +82,13 @@
                                 Rows="3" />
                         </div>
 
-                        <!-- BOTÕES -->
+                     
                         <asp:Button
-                            ID="btnSalvar"
+                            ID="btnAtualizar"
                             runat="server"
-                            Text="Salvar"
+                            Text="Atualizar"
                             CssClass="btn btn-success"
-                            OnClick="btnSalvar_Click" />
+                            OnClick="btnAtualizar_Click" />
 
                         <asp:Button
                             ID="btnCancelar"
