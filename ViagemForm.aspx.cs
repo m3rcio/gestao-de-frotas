@@ -13,8 +13,11 @@ public partial class ViagemForm : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        if (Session["Logado"] == null)
+        if (Session["usuario_id"] == null)
+        {
             Response.Redirect("Default.aspx");
+            return;
+        }
 
         if (!IsPostBack)
         {

@@ -11,6 +11,11 @@ public partial class ManutencaoForm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["usuario_id"] == null)
+        {
+            Response.Redirect("Default.aspx");
+            return;
+        }
         if (!IsPostBack)
         {
             CarregarVeiculos();

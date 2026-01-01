@@ -35,7 +35,7 @@ public partial class _Default : Page
 
             if (dr.Read())
             {
-                // CRIA SESSÃO
+                
                 Session["usuario_id"] = dr["usuario_id"];
                 Session["nome_usuario"] = dr["nome_usuario"];
 
