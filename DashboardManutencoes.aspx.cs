@@ -12,10 +12,15 @@ public partial class DashboardManutencoes : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            CarregarManutencoes();
+        }
+        if (Session["Logado"] == null)
+            Response.Redirect("Default.aspx");
     }
 
-    void CarregarManutencoes()
+    private void CarregarManutencoes()
     {
         string cs = ConfigurationManager
             .ConnectionStrings["DefaultConnection"]
