@@ -74,5 +74,14 @@ public partial class ManutencaoForm : System.Web.UI.Page
         Response.Redirect("DashboardManutencoes.aspx");
     }
 
+    protected void gvManutencoes_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        if (e.CommandName == "Editar")
+        {
+            Response.Redirect(
+                "EditarManutencao.aspx?id=" + e.CommandArgument
+            );
+        }
+    }
 
 }
