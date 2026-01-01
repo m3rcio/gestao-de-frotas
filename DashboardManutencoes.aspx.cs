@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,5 +13,34 @@ public partial class DashboardManutencoes : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
+    }
+
+    void CarregarManutencoes()
+    {
+        string cs = ConfigurationManager
+            .ConnectionStrings["DefaultConnection"]
+            .ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            string sql = @"
+            SELECT
+                m.manutencao_id,
+                v.matricula AS veiculo,
+                m.tipo,
+                m.custo,
+                m.data,
+                m.descricao
+            FROM manutencoes m
+            JOIN veiculos v ON v.veiculo_id = m.veiculo_id
+            ORDER BY m.data DESC";
+
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            gvManutencoes.DataSource = dt;
+            gvManutencoes.DataBind();
+        }
     }
 }
