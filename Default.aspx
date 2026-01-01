@@ -47,7 +47,7 @@
                             <asp:Button
                                 ID="btnLogin"
                                 runat="server"
-                                Text="Sign In"
+                                Text="Entrar"
                                 CssClass="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2"
                                 OnClick="btnLogin_Click" />
 
