@@ -114,4 +114,10 @@ public partial class EditarManutencao : System.Web.UI.Page
 
         Response.Redirect("DashboardManutencoes.aspx");
     }
+
+    protected void btnCancelar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("DashboardManutencoes.aspx");
+    }
+
 }
