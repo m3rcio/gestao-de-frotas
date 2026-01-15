@@ -111,6 +111,9 @@
                                     <asp:TextBox ID="txtMatricula" runat="server"
                                         CssClass="form-control" />
                                 </div>
+                                 <asp:Label ID="lblMensagem" runat="server"
+                                    CssClass="text-success"
+                                    Visible="false" />
 
                                <!-- <div class="mb-3">
                                     <label class="form-label">Localização</label>
