@@ -92,6 +92,26 @@
                                 TextMode="Number" />
                         </div>
 
+                         <!-- DATA SAÍDA -->
+                        <div class="mb-3">
+                            <label class="form-label">Data de retorno</label>
+                            <asp:TextBox
+                                ID="data_retorno"
+                                runat="server"
+                                CssClass="form-control"
+                                TextMode="DateTimeLocal" />
+                        </div>
+
+                        <!-- KM SAÍDA -->
+                        <div class="mb-3">
+                            <label class="form-label">KM de Retorno</label>
+                            <asp:TextBox
+                                ID="km_retorno"
+                                runat="server"
+                                CssClass="form-control"
+                                TextMode="Number" />
+                        </div>
+
                         <asp:Button
                             ID="btnSalvar"
                             runat="server"

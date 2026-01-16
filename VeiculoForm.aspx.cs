@@ -23,25 +23,6 @@ public partial class VeiculoForm : System.Web.UI.Page
         Response.Redirect("Dashboard.aspx");
     }
 
-    private void verificarMtricula()
-    {
-        string sqlCheck = "SELECT COUNT(*) FROM veiculos WHERE matricula = @matricula";
-        string cs = ConfigurationManager
-                        .ConnectionStrings["DefaultConnection"].ConnectionString;
-        SqlConnection con = new SqlConnection(cs);
-        SqlCommand cmdCheck = new SqlCommand(sqlCheck, con);
-        cmdCheck.Parameters.AddWithValue("@matricula", txtMatricula.Text.Trim());
-
-        int existe = (int)cmdCheck.ExecuteScalar();
-
-        if (existe > 0)
-        {
-            lblMensagem.Text = "Esta matrícula já está registada.";
-            lblMensagem.ForeColor = System.Drawing.Color.Red;
-            return;
-        }
-    }
-
     protected void btnSalvar_Click(object sender, EventArgs e)
     {
         string cs = ConfigurationManager
@@ -55,7 +36,7 @@ public partial class VeiculoForm : System.Web.UI.Page
                           (@Matricula, @Marca, @Modelo, @Ano, @Km, @Estado)";
 
             SqlCommand cmd = new SqlCommand(sql, con);
-            verificarMtricula();
+
             cmd.Parameters.AddWithValue("@Matricula", txtMatricula.Text);
             cmd.Parameters.AddWithValue("@Marca", txtMarca.Text);
             cmd.Parameters.AddWithValue("@Modelo", txtModelo.Text);
