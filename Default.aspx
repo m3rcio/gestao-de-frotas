@@ -17,10 +17,10 @@
                     <div class="card mb-0">
                         <div class="card-body">
 
-                            <a runat="server" href="~/Login.aspx"
+                           <!-- <a runat="server" href="~/Login.aspx"
                                class="text-nowrap logo-img text-center d-block py-3 w-100">
                                 <img src="assets/images/logos/logo.svg" alt="">
-                            </a>
+                            </a> -->
 
                             <p class="text-center">Entrar no sistema</p>
 
